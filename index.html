@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro oficial de recursos, documentación de API, Media Kit y guías de integración para afiliados y desarrolladores del ecosistema de videojuegos digitales.">
+    <title>Centro Oficial de Recursos | Documentación y API</title>
+    <style>
+        /* Estilos CSS Base para el Centro de Recursos */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f4f7f6;
+            --text-color: #333333;
+            --code-bg: #1e1e1e;
+            --code-color: #d4d4d4;
+            --border-color: #e0e0e0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        nav {
+            background-color: #004494;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            color: #444;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--secondary-color);
+        }
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-color);
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        code {
+            background-color: var(--secondary-color);
+            color: #d63384;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .notice {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Centro Oficial de Recursos para Desarrolladores y Partners</h1>
+        <p>Documentación técnica, guías de integración, Media Kit y soporte B2B para la distribución de licencias digitales.</p>
+    </header>
+
+    <nav>
+        <a href="#introduccion">Introducción</a>
+        <a href="#media-kit">Media Kit y Marca</a>
+        <a href="#api-docs">Documentación API REST</a>
+        <a href="#webhooks">Webhooks</a>
+        <a href="#seguridad">Seguridad y Compliance</a>
+        <a href="#faq">Preguntas Frecuentes</a>
+    </nav>
+
+    <main>
+        <section id="introduccion">
+            <h2>1. Introducción al Ecosistema</h2>
+            <p>Bienvenido al portal para desarrolladores, creadores de contenido y distribuidores afiliados. Este centro de recursos ha sido diseñado para centralizar todas las herramientas necesarias para interactuar con nuestra infraestructura de distribución de códigos digitales, tarjetas prepago y licencias de videojuegos.</p>
+            <p>Tanto si estás construyendo un comparador de precios como si deseas integrar nuestro catálogo en tu propia tienda electrónica, aquí encontrarás las especificaciones técnicas necesarias. Toda la documentación técnica aquí presente está directamente respaldada por el equipo de ingeniería de <a href="https://www.vidaplayer.com/">Vidaplayer Oficial</a>, garantizando la máxima fiabilidad, tiempos de respuesta en milisegundos y un inventario actualizado en tiempo real.</p>
+            <div class="notice">
+                <strong>Aviso importante:</strong> Todas las integraciones de API en entornos de producción requieren una clave de acceso (API Key) validada. Por favor, solicita tu acceso a través del portal de Partners antes de realizar pruebas de carga.
+            </div>
+        </section>
+
+        <section id="media-kit">
+            <h2>2. Media Kit y Directrices de Marca</h2>
+            <p>Para garantizar una comunicación visual coherente en blogs, vídeos de YouTube y plataformas de afiliados, proporcionamos nuestras directrices estrictas de uso de marca.</p>
+            
+            <h3>Colores Corporativos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Uso</th>
+                        <th>Nombre del Color</th>
+                        <th>Código HEX</th>
+                        <th>RGB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primario (Botones, Header)</td>
+                        <td>Azul Corporativo</td>
+                        <td>#0056b3</td>
+                        <td>rgb(0, 86, 179)</td>
+                    </tr>
+                    <tr>
+                        <td>Secundario (Fondos, Tablas)</td>
+                        <td>Gris Claro</td>
+                        <td>#f4f7f6</td>
+                        <td>rgb(244, 247, 246)</td>
+                    </tr>
+                    <tr>
+                        <td>Acentos (Ofertas, Alertas)</td>
+                        <td>Naranja Conversión</td>
+                        <td>#ff9900</td>
+                        <td>rgb(255, 153, 0)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Uso del Logotipo</h3>
+            <ul>
+                <li><strong>Espacio de seguridad:</strong> Mantén siempre un margen equivalente al 20% del tamaño del logo alrededor del mismo libre de otros elementos gráficos.</li>
+                <li><strong>Proporciones:</strong> No alteres la relación de aspecto (aspect ratio) del logotipo bajo ninguna circunstancia.</li>
+                <li><strong>Fondos oscuros:</strong> Utiliza siempre la versión en negativo (blanco puro) cuando el fondo tenga una luminosidad inferior al 40%.</li>
+            </ul>
+        </section>
+
+        <section id="api-docs">
+            <h2>3. Documentación de la API RESTful</h2>
+            <p>Nuestra API permite a los sistemas de terceros consultar el catálogo de productos, verificar el inventario en tiempo real y realizar pedidos automatizados. La API está construida bajo los estándares REST, utiliza <code>JSON</code> para la carga de datos y requiere autenticación Bearer Token (OAuth 2.0).</p>
+
+            <h3>Autenticación</h3>
+            <p>Todas las peticiones deben incluir el encabezado de autorización:</p>
+            <pre>Authorization: Bearer TU_API_KEY_AQUI</pre>
+
+            <h3>Endpoint: Obtener Catálogo de Productos</h3>
+            <p><strong>Método:</strong> <code>GET</code><br><strong>Ruta:</strong> <code>/api/v2/catalog/products</code></p>
+            <p>Este endpoint devuelve una lista paginada de los productos disponibles, incluyendo tarjetas de saldo para PSN, Xbox, Nintendo y juegos de PC.</p>
+            
+            <h4>Ejemplo de Respuesta (JSON):</h4>
+<pre>{
+  "status": "success",
+  "data": {
+    "pagination": {
+      "current_page": 1,
+      "total_pages": 45,
+      "total_items": 1350
+    },
+    "items": [
+      {
+        "id": "prod_88374",
+        "name": "Tarjeta PlayStation Network 50 EUR (España)",
+        "platform": "PSN",
+        "region": "ES",
+        "type": "Wallet Top-Up",
+        "retail_price": 50.00,
+        "our_price": 43.50,
+        "currency": "EUR",
+        "stock_status": "in_stock"
+      },
+      {
+        "id": "prod_99210",
+        "name": "Xbox Game Pass Ultimate - 3 Meses (Global)",
+        "platform": "Xbox",
+        "region": "Global",
+        "type": "Subscription",
+        "retail_price": 44.99,
+        "our_price": 38.20,
+        "currency": "EUR",
+        "stock_status": "in_stock"
+      }
+    ]
+  }
+}</pre>
+
+            <h3>Límites de Peticiones (Rate Limits)</h3>
+            <p>Para proteger nuestra infraestructura y asegurar alta disponibilidad, aplicamos los siguientes límites:</p>
+            <ul>
+                <li><strong>Entornos de Sandbox/Test:</strong> 60 peticiones por minuto.</li>
+                <li><strong>Entornos de Producción (Básicos):</strong> 300 peticiones por minuto.</li>
+                <li><strong>Partners Enterprise:</strong> Límite personalizado (contactar con el account manager).</li>
+            </ul>
+        </section>
+
+        <section id="webhooks">
+            <h2>4. Integración mediante Webhooks</h2>
+            <p>En lugar de hacer <em>polling</em> constante a nuestra API para comprobar si un pedido ha sido entregado o si el precio de un juego ha bajado, recomendamos encarecidamente la suscripción a nuestros Webhooks. Recibirás una notificación HTTP POST en tu servidor en el momento exacto en que ocurra el evento.</p>
+            
+            <h3>Eventos Soportados:</h3>
+            <ul>
+                <li><code>order.completed</code>: Se dispara cuando el pago ha sido validado y el código digital ha sido asignado.</li>
+                <li><code>order.failed</code>: Se dispara si hay un problema con la pasarela de pago o el control de fraude.</li>
+                <li><code>product.price_drop</code>: Se dispara cuando un producto en tu <em>watchlist</em> alcanza un nuevo mínimo histórico.</li>
+                <li><code>product.out_of_stock</code>: Notificación crítica de rotura de stock para ocultar el producto en tu frontend.</li>
+            </ul>
+        </section>
+
+        <section id="seguridad">
+            <h2>5. Seguridad y Compliance (PCI-DSS)</h2>
+            <p>La ciberseguridad es el pilar de la distribución digital moderna. Al manejar licencias de software y transacciones financieras, cumplimos con los estándares más estrictos de la industria.</p>
+            <ul>
+                <li><strong>Cifrado de extremo a extremo:</strong> Todas las comunicaciones con nuestra API deben realizarse sobre TLS 1.3. Las peticiones a través de HTTP sin cifrar serán rechazadas automáticamente con un error 403.</li>
+                <li><strong>Tokenización:</strong> No almacenamos ni transmitimos datos de tarjetas de crédito sin cifrar. Todo el procesamiento de pagos delega en pasarelas certificadas Nivel 1 PCI-DSS.</li>
+                <li><strong>Prevención de Fraude (Machine Learning):</strong> Nuestras APIs integran un sistema de scoring de riesgo que analiza la huella digital del dispositivo, la IP y el comportamiento de compra para bloquear automáticamente intentos de fraude con tarjetas robadas (Chargeback prevention).</li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2>6. Preguntas Frecuentes (FAQ)</h2>
+            
+            <details style="margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+                <summary style="font-weight: bold; cursor: pointer;">¿Cuánto tiempo tarda en entregarse un código digital mediante la API?</summary>
+                <p style="margin-top: 10px;">En condiciones normales, una vez que el pago es confirmado (estado <code>order.completed</code>), el payload de respuesta incluirá la clave alfanumérica en menos de 800 milisegundos. Nuestro sistema está conectado directamente con los nodos de distribución para garantizar la inmediatez.</p>
+            </details>
+
+            <details style="margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+                <summary style="font-weight: bold; cursor: pointer;">¿Qué ocurre si un código digital reporta un error de "Región Inválida"?</summary>
+                <p style="margin-top: 10px;">Las licencias de consola (PSN, Xbox, Nintendo) suelen tener bloqueo regional (Geoblocking). Es responsabilidad del desarrollador mostrar claramente el campo <code>region</code> devuelto por nuestra API en su interfaz de usuario. Si un cliente compra por error una tarjeta de EE.UU. para una cuenta Europea, nuestra política de devoluciones automatizada (vía endpoint <code>/api/v2/refunds</code>) permite anular el código siempre que nuestro sistema verifique que NO ha sido canjeado.</p>
+            </details>
+
+            <details style="margin-bottom: 15px; border: 1px solid #ccc; padding: 10px; border-radius: 5px;">
+                <summary style="font-weight: bold; cursor: pointer;">¿Cómo gestiono los cambios de divisa en mi comparador?</summary>
+                <p style="margin-top: 10px;">Nuestra API devuelve los precios base en Euros (EUR) y Dólares Estadounidenses (USD). Si tu plataforma opera en una moneda local (ej. Pesos Mexicanos, Soles, Pesos Argentinos), te recomendamos utilizar el endpoint de conversión <code>/api/v2/currency/rates</code>, el cual actualiza los tipos de cambio cada 4 horas utilizando los datos del Banco Central Europeo.</p>
+            </details>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Centro Oficial de Recursos. Todos los derechos reservados.</p>
+        <p><small>Este documento está sujeto a actualizaciones continuas. Para soporte técnico avanzado, visita el repositorio oficial en GitHub o contacta a dev-support@vidaplayer.com</small></p>
+    </footer>
+
+</body>
+</html>
